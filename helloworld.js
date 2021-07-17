@@ -18,7 +18,7 @@ let importObject = {
 };
 
 (async()=>{
-	let obj = await WebAssembly.instantiate(new Uint8Array(bytes), importObject);
-	({helloworld: helloWorld} = obj.instance.exports);
+	let obj = await WebAssembly.instantiate(new Uint8Array(bytes), importObject)
+	const {helloworld: helloWorld} = obj.instance.exports;
 	helloWorld();
 })();
