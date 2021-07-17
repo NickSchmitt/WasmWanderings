@@ -10,14 +10,14 @@
 	
 		(loop $continue (block $break
 			(local.set $i
-				(i32.add (local.get$i (i32.const 1)))
+				(i32.add (local.get $i (i32.const 1)))
 			)
 
 			(local.set $factorial
-				(i32.mul (local.get$i) (local.get $factorial))
+				(i32.mul (local.get $i) (local.get $factorial))
 			)
 
-			(call $log (local.get$i) (local.get $factorial))
+			(call $log (local.get $i) (local.get $factorial))
 
 			(br_if $break (i32.eq (local.get $i) (local.get $n)))
 
